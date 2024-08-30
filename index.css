@@ -11,33 +11,24 @@ body {
 }
 
 .container {
-
-    opacity: 1;
+    opacity: 0.9;
     border-radius: 10px;
-    border: solid;
-    border-color:rgba(0, 0, 0, 0.5);
+    border: solid 1px rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     width: 90%;
     max-width: 400px;
     padding: 20px;
     text-align: center;
-    box-shadow: 10px 10px 5px rgb(62, 63, 63);
+    animation: fadeInUp 1.5s ease-out;
 }
 
-.divider i{
+.divider i {
     margin-left: 10px;
-   
     color: rgb(246, 3, 31);
 }
-.divider i:hover{
-
+.divider i:hover {
     color: rgb(56, 7, 248);
 }
-.truck-image {
-    width: 80px;
-    height: auto;
-}
-
 
 .form-container {
     display: flex;
@@ -71,34 +62,33 @@ button {
     font-size: 16px;
     cursor: pointer;
     transition: background 0.3s ease;
-    width: 80px;
-    height: 40px;
-    margin-bottom: 20px;
 }
 
 button:hover {
     background: #005bb5;
 }
-#login-form p{
-    margin-top: 0px;
-}
-p {
-    margin-top:30px;
-}
-
 
 a {
-    color:  rgb(3, 3, 229);  
-      text-decoration: none;
+    color: rgb(3, 3, 229);
+    text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
-
-    
-    color:rgba(25, 122, 232, 0.904);
+    color: rgba(25, 122, 232, 0.904);
 }
 
 .hidden {
     display: none;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
